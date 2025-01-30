@@ -1,0 +1,78 @@
+@use '../../styles/_variables.scss';
+@use '../../styles/_mixins.scss';
+
+.navbar {
+    background-color: variables.$light-color;
+    box-shadow: variables.$shadow;
+    padding: 0.5rem 1rem;
+
+    .container {
+        @include mixins.flex-center;
+        justify-content: space-between;
+
+        .site-logo {
+            @include mixins.flex-center;
+            width: 100%;
+            justify-content: space-between;
+
+            img {
+                width: 18%;
+            }
+
+            button {
+                z-index: 11;
+                @media screen and (min-width: 990px) {
+                    display: none;
+                }
+            }
+        }
+
+        .navbar-collapse {
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 10;
+            background-color: variables.$ocean-color;
+            height: 100%;
+            width: 280px;
+            padding: 10rem 3rem 0 3rem;
+            transform: translate(100%);
+            transition: variables.$transition;
+
+            @media screen and (min-width: 990px) {
+                position: relative;
+                height: auto;
+                padding: 0;
+                width: 100%;
+                background-color: transparent;
+                transform: translateX(0);
+
+                .navbar-nav {
+                    display: flex;
+                    gap: 2rem;
+                    justify-content: flex-end;
+                }
+            }
+
+            .nav-item {
+                color: variables.$light-color;
+                font-weight: variables.$fw-5;
+                margin-bottom: 2rem;
+                font-size: 1.25rem;
+
+                &:hover {
+                    color: variables.$orange-color;
+                }
+
+                @media screen and (min-width: 990px) {
+                    color: variables.$midnight-color;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .show-navbar-collapse {
+            transform:translateX(0)
+        }
+    }
+}

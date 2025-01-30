@@ -1,0 +1,28 @@
+@use '../../styles/_variables.scss';
+@use '../../styles/_mixins.scss';
+
+.book-card {
+    @include mixins.card-style;
+
+    .image-placeholder {
+        width: 100%;
+        height: 300px;
+    }
+
+    img {
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        font-family: variables.$font-header;
+        color: variables.$ocean-color;
+        padding-top: 1.5rem;
+    }
+
+    h3 {
+        color: variables.$orange-color;
+    }
+}

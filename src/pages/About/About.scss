@@ -1,0 +1,30 @@
+@use '../../styles/_variables.scss';
+@use '../../styles/_mixins.scss';
+
+.about {
+    &__banner {
+        @include mixins.flex-center;
+        min-height: 30vh;
+        background:  linear-gradient(rgba(173, 106, 52, 0.7), rgba(220, 190, 135, 0.1)), url("../../img/about-banner.webp") center/cover no-repeat;
+        
+        h2 {
+            font-size: 2.5rem;
+            color: variables.$light-color;
+        }
+    }
+
+    &__content {
+        height: 50vh;
+        h3 {
+            font-family: variables.$font-header;
+            letter-spacing: 4px;
+            margin: 2rem 0;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        p {
+            padding: 1rem 0;
+        }
+    }
+}

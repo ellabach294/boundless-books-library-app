@@ -1,0 +1,10 @@
+@use '../../styles/_variables.scss';
+@use '../../styles/_mixins.scss';
+
+.footer {
+    @include mixins.flex-center;
+    flex-direction: column;
+    background: variables.$ocean-color;
+    color: variables.$light-color;
+    padding: 2rem;
+}

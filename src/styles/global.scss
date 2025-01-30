@@ -1,0 +1,16 @@
+@use 'variables';
+@use 'mixins';
+
+body {
+    margin: 0;
+    font-family: variables.$font-base;
+    color: variables.$midnight-color;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
