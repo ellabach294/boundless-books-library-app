@@ -33,7 +33,7 @@ Live Demo: https://boundless-books-app.vercel.app
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ellabach294/boundless-books-library.git
+git clone https://github.com/ellabach294/boundless-books-library-app.git
 cd book-library
 ```
 2. Install dependencies:
@@ -102,4 +102,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 * Vercel for seamless deployment.
 
 Enjoy exploring books with the Boundless Books Library App! 📚✨
-
